@@ -88,13 +88,17 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+// Get references to the #generate element
+const generateBtn = document.querySelector('#generate');
 let passwordText = document.querySelector('#password');
-
-
 let passwordLength
+let passwordBase = [];
+let randomCharacter = [];
 
 // function to prompt user for desired password length
 function getLength() {
+  passwordBase = [];
+  randomCharacter = []
 
   passwordLength = prompt("Pick a length between 10 and 64 characters");
   let passwordLengthValue = parseFloat(passwordLength);
@@ -108,7 +112,6 @@ function getLength() {
   }
 }
 
-let passwordBase = [];
 
 // Function to prompt user for password options
 function getCharacterTypes() {
@@ -139,9 +142,6 @@ function getCharacterTypes() {
 
 }
 
-let randomCharacter = [];
-// var characterTotal = parseFloat(getLength());
-
 // Function for getting a random element from an array
 function getRandom(passwordBase) {
 
@@ -155,19 +155,18 @@ function getRandom(passwordBase) {
 // Function to generate password with user input
 function generatePassword() {
 
+let password = ``
   getCharacterTypes();
   getRandom(passwordBase);
-  let password = randomCharacter.join("")
+  password = randomCharacter.join("")
   return password;
 }
 
-// Get references to the #generate element
-const generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
 function writePassword() {
-
-  let password = generatePassword();
+  let password = ``
+  password = generatePassword();
   passwordText.value = password;
 }
 
