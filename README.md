@@ -8,6 +8,8 @@ A web application to generate a randomised password on user click
  - Allows the user to choose whether to include lowercase and uppercase letters
  - Allows the user to choose to include special characters and numbers
 
+ ![Screenshot](./assets/Screenshot%202023-02-03%20020000.png)
+
 ## Project Link
 https://room4renzo.github.io/Password-Generator/
 
